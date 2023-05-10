@@ -1,93 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
     font-family: 'Roboto', sans-serif;
-    background-color: #E5E5E5;
-}
-
-.container .perguntas {
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    background-color: #FCFCFC;
-    width: 655px;
-    height: 347px;
-    border-radius: 21px;
-    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
-.container .perguntas .figura-homem {
-    position: absolute;
-    width: 278px;
-    height: 293px;
-    left: -10%;
-}
-
-.container .perguntas .titulo {
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: 60px;
-}
-
-.container .perguntas .lista-perguntas {
-    margin-left: 220px;
-    width: 60%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;   
-}
-
-.container .perguntas .lista-perguntas h2{
-    font-size: 17px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.container .perguntas .lista-perguntas h2 a {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.container .perguntas .lista-perguntas p{
-    font-size: 15px;
-    font-weight: 300;
-    text-align: justify;
-    padding: 10px;
-}
-
-.container .perguntas .lista-perguntas hr {
-    margin-bottom: 5px;
-    opacity: 0.8;
-}
-
-.container .perguntas .lista-perguntas .seta {    
-    background: url(./image/botao.png)no-repeat;
+.container .tela {
     background-size: cover;
-    width: 15px;
-    height: 8.64px;
-}
-
-.container .perguntas .lista-perguntas .seta:hover{
-    background: url(./image/seta\ aberta.png)no-repeat;
-    background-size: cover;
-    width: 15px;
-    height: 8.64px;
-}
-
-.container .lista-perguntas p {
+    min-height: 100%;
+    min-width: 100%;
+    padding-top: 150px;
+    padding-left: 150px;
+    position: absolute;
     display: none;
 }
 
-.container .lista-perguntas .mostrar{
+.container .tela.mostrar {
     display: block;
+    transition: 0.8s;
+}
+
+.container .primeira {
+    background: url(./images/flores-brancas.jpeg) center center no-repeat;
+}
+
+.container .segunda {
+    background: url(./images/floresta-4k.jpg)center center no-repeat;
+}
+
+.container .terceira {
+    background: url(./images/floresta-do-outono.avif)center center no-repeat;
+}
+
+.container .quarta {
+    background: url(./images/floresta-rio.jpg)center center no-repeat;
+}
+
+.container .tela .conteudo {
+    background-color: #fff;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.container .tela .conteudo p{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container .primeira .conteudo .btn-saiba-mais {
+    color: rgb(196, 162, 11);
+}
+
+.container .segunda .conteudo .btn-saiba-mais {
+    color: rgb(28, 182, 8);
+}
+
+.container .terceira .conteudo .btn-saiba-mais {
+    color: rgb(156, 62, 7);
+}
+
+.container .quarta .conteudo .btn-saiba-mais {
+    color: rgb(94, 119, 6);
+}
+
+.container .tela .conteudo .btn-saiba-mais {
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 36%;
+}
+
+.container .tela .conteudo .btn-saiba-mais:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.container .seta {
+    background: url(./images/seta.png)no-repeat center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.container .seta.opacidade{
+    opacity: 0.6;
+    cursor: default;
+}
+
+.container .seta.avancar {
+    right: 30px;
+}
+
+.container .seta.voltar {
+    left: 30px;
+    transform: rotate(180deg);
 }
